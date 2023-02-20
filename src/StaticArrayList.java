@@ -28,7 +28,7 @@ public class StaticArrayList {
         }
     }
     public void popBack(){
-        int aux =size;
+        int aux =list[size-1];
         if(!isEmpty()){
             size--;
             System.out.println("poped value: "+aux);
@@ -36,6 +36,27 @@ public class StaticArrayList {
         else{
             System.out.println("List is empty");
         }
+    }
+    public void pushFront(int value){
+        if(isFull()){
+            System.out.println("List is full");
+        }
+        else{
+            size++;
+            for(int i=size-1;i>0;i--){
+                list[i] = list[i-1];
+            }
+            list[0] = value;
+        }
+    }
+    public void popFront(){
+        //System.out.println(size);
+        int aux = list[0];
+        for(int i=0;i<size-1;i++){
+            list[i] = list[i+1];
+        }
+        size--;
+        System.out.println("Poped value: "+aux);
     }
 
     public void printString(){

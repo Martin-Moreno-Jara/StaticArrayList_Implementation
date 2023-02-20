@@ -9,9 +9,13 @@ public class Main {
         myArray.printString();
         myArray.pushBack(4);
         myArray.printString();
-        myArray.pushBack(5);
+        myArray.pushBack(17);
         myArray.printString();
         myArray.popBack();
+        myArray.printString();
+        myArray.pushFront(12);
+        myArray.printString();
+        myArray.popFront();
         myArray.printString();
     }
 }
